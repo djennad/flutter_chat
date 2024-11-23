@@ -99,7 +99,7 @@ class UsersScreen extends StatelessWidget {
                       MaterialPageRoute(
                         builder: (context) => PrivateChatScreen(
                           otherUserId: users[index].id,
-                          otherUserName: username,
+                          otherUsername: username,
                         ),
                       ),
                     );
