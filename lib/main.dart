@@ -6,6 +6,7 @@ import 'package:chat_web_app/screens/chat_screen.dart';
 import 'package:chat_web_app/screens/users_screen.dart';
 import 'package:chat_web_app/providers/auth_provider.dart' as app_auth;
 import 'package:provider/provider.dart';
+import 'package:chat_web_app/services/notification_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,6 +20,7 @@ void main() async {
       appId: "1:1040716817417:web:e33bcca17c6383dfa5c4d8"
     )
   );
+  await NotificationService.initialize();
   runApp(const ChatApp());
 }
 

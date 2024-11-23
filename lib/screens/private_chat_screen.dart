@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:chat_web_app/services/notification_service.dart';
 
 class PrivateChatScreen extends StatefulWidget {
   final String otherUserId;
@@ -29,22 +30,45 @@ class _PrivateChatScreenState extends State<PrivateChatScreen> {
   }
 
   void _sendMessage() async {
+    if (_messageController.text.trim().isEmpty) return;
+
+    final currentUser = FirebaseAuth.instance.currentUser;
     if (currentUser == null) return;
 
-    final message = _messageController.text.trim();
-    if (message.isEmpty) return;
+    try {
+      // Create a chat room ID that's the same for both users
+      final users = [currentUser.uid, widget.otherUserId]..sort();
+      final chatRoomId = users.join('_');
 
-    final chatRoomId = getChatRoomId();
+      // Add message to Firestore
+      await _firestore.collection('messages').add({
+        'chatRoomId': chatRoomId,
+        'senderId': currentUser.uid,
+        'receiverId': widget.otherUserId,
+        'text': _messageController.text.trim(),
+        'timestamp': FieldValue.serverTimestamp(),
+        'isRead': false,
+      });
 
-    await _firestore.collection('private_chats').doc(chatRoomId).collection('messages').add({
-      'text': message,
-      'createdAt': Timestamp.now(),
-      'senderId': currentUser!.uid,
-      'senderEmail': currentUser!.email,
-      'receiverId': widget.otherUserId,
-    });
+      // Get receiver's online status
+      final receiverDoc = await _firestore.collection('users').doc(widget.otherUserId).get();
+      final isReceiverOnline = receiverDoc.data()?['isOnline'] ?? false;
 
-    _messageController.clear();
+      // Show notification if receiver is not online
+      if (!isReceiverOnline) {
+        NotificationService.showNotification(
+          'New message from ${currentUser.email?.split('@')[0] ?? 'Unknown'}',
+          _messageController.text.trim(),
+        );
+      }
+
+      _messageController.clear();
+    } catch (e) {
+      print('Error sending message: $e');
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Error sending message')),
+      );
+    }
   }
 
   @override
@@ -60,10 +84,9 @@ class _PrivateChatScreenState extends State<PrivateChatScreen> {
           Expanded(
             child: StreamBuilder<QuerySnapshot>(
               stream: _firestore
-                  .collection('private_chats')
-                  .doc(chatRoomId)
                   .collection('messages')
-                  .orderBy('createdAt', descending: true)
+                  .where('chatRoomId', isEqualTo: chatRoomId)
+                  .orderBy('timestamp', descending: true)
                   .snapshots(),
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
@@ -87,7 +110,9 @@ class _PrivateChatScreenState extends State<PrivateChatScreen> {
                     return MessageBubble(
                       message: chatData['text'],
                       isMe: isMe,
-                      senderEmail: chatData['senderEmail'],
+                      senderEmail: chatData['senderId'] == currentUser!.uid
+                          ? currentUser!.email ?? 'Unknown User'
+                          : widget.otherUsername ?? 'Unknown User',
                       key: ValueKey(chatDoc.id),
                     );
                   },

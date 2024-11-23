@@ -13,11 +13,13 @@ class AuthProvider with ChangeNotifier {
 
   Future<void> signUp(String email, String password) async {
     try {
+      print('Starting user registration for email: $email');
       UserCredential userCredential = await _auth.createUserWithEmailAndPassword(
         email: email, 
         password: password
       );
       _user = userCredential.user;
+      print('Firebase Auth user created with UID: ${_user!.uid}');
       
       // Add user to Firestore
       await _firestore.collection('users').doc(_user!.uid).set({
@@ -27,6 +29,7 @@ class AuthProvider with ChangeNotifier {
         'createdAt': FieldValue.serverTimestamp(),
         'isOnline': true,
       });
+      print('User document created in Firestore');
 
       notifyListeners();
     } catch (e) {
@@ -59,14 +62,20 @@ class AuthProvider with ChangeNotifier {
   }
 
   Future<void> signOut() async {
-    if (_user != null) {
-      await _firestore.collection('users').doc(_user!.uid).update({
-        'lastSeen': FieldValue.serverTimestamp(),
-        'isOnline': false,
-      });
+    try {
+      if (_user != null) {
+        // Update user's online status and last seen before signing out
+        await _firestore.collection('users').doc(_user!.uid).update({
+          'lastSeen': FieldValue.serverTimestamp(),
+          'isOnline': false,
+        });
+      }
+      await _auth.signOut();
+      _user = null;
+      notifyListeners();
+    } catch (e) {
+      print('Sign out error: $e');
+      rethrow;
     }
-    await _auth.signOut();
-    _user = null;
-    notifyListeners();
   }
 }

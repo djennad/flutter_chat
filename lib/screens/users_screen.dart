@@ -22,17 +22,45 @@ class UsersScreen extends StatelessWidget {
             .orderBy('lastSeen', descending: true)
             .snapshots(),
         builder: (context, snapshot) {
+          // Print connection state
+          print('Connection state: ${snapshot.connectionState}');
+          
           if (snapshot.connectionState == ConnectionState.waiting) {
+            print('Loading users...');
             return const Center(child: CircularProgressIndicator());
           }
 
-          if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
+          if (!snapshot.hasData) {
+            print('No data in snapshot');
             return const Center(child: Text('No users found'));
           }
 
+          if (snapshot.hasError) {
+            print('Error in snapshot: ${snapshot.error}');
+            print('Error stack trace: ${snapshot.stackTrace}');
+            return const Center(child: Text('Error loading users'));
+          }
+
+          print('Number of documents: ${snapshot.data!.docs.length}');
+          
+          // Print all users before filtering
+          snapshot.data!.docs.forEach((doc) {
+            final data = doc.data() as Map<String, dynamic>;
+            print('User document: id=${doc.id}, data=$data');
+          });
+          
           final users = snapshot.data!.docs
               .where((doc) => doc.id != currentUser?.uid)
               .toList();
+
+          print('Current user ID: ${currentUser?.uid}');
+          print('Number of other users: ${users.length}');
+          
+          // Print filtered users
+          users.forEach((doc) {
+            final data = doc.data() as Map<String, dynamic>;
+            print('Filtered user: id=${doc.id}, data=$data');
+          });
 
           if (users.isEmpty) {
             return const Center(child: Text('No other users found'));

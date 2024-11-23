@@ -11,8 +11,10 @@ dependencies:
   firebase_auth: ^4.9.0
   cloud_firestore: ^4.9.1
   provider: ^6.0.5
-  google_fonts: ^5.1.0
   timeago: ^3.5.0
+  js: ^0.6.7
+  flutter_local_notifications: ^15.1.1
+  google_fonts: ^5.1.0
 
 dev_dependencies:
   flutter_test:
