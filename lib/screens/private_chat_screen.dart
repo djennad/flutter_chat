@@ -127,6 +127,26 @@ class _PrivateChatScreenState extends State<PrivateChatScreen> {
               _playNotificationSound();
             },
           ),
+          Container(
+            margin: const EdgeInsets.symmetric(horizontal: 8.0),
+            decoration: BoxDecoration(
+              color: Colors.purple,
+              borderRadius: BorderRadius.circular(8.0),
+            ),
+            child: IconButton(
+              icon: const Icon(Icons.star, color: Colors.yellow),
+              tooltip: 'Test New Changes',
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text('✨ New Purple Button Added! - Version 2'),
+                    backgroundColor: Colors.purple,
+                    duration: Duration(seconds: 2),
+                  ),
+                );
+              },
+            ),
+          ),
         ],
       ),
       body: Column(
