@@ -1,0 +1,31 @@
+name: chat_web_app
+description: A Flutter web chat application using Firebase
+
+environment:
+  sdk: '>=3.1.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  firebase_core: ^2.15.1
+  firebase_auth: ^4.9.0
+  cloud_firestore: ^4.9.1
+  provider: ^6.0.5
+  timeago: ^3.5.0
+  js: ^0.6.7
+  flutter_local_notifications: ^15.1.1
+  google_fonts: ^5.1.0
+  just_audio: ^0.9.34
+  just_audio_web: ^0.4.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  fake_cloud_firestore: ^2.4.1+1
+  firebase_auth_mocks: ^0.12.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/notification.mp3

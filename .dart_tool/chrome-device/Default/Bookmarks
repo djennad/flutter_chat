@@ -1,0 +1,385 @@
+{
+   "checksum": "0f9c9250f01c7f158ff29e7fd3604f23",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "0",
+            "date_last_used": "13366026762766150",
+            "guid": "5a886c9e-972b-4c60-baee-b46b45638cee",
+            "id": "16",
+            "name": "Gmail",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://accounts.google.com/b/0/AddMailService",
+            "visit_count": 0
+         }, {
+            "date_added": "0",
+            "date_last_used": "13376538895750957",
+            "guid": "5d8c7817-58db-419a-a904-0aca634fa4ff",
+            "id": "17",
+            "name": "YouTube",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://youtube.com/",
+            "visit_count": 1
+         }, {
+            "date_added": "13370649793867788",
+            "date_last_used": "0",
+            "guid": "6efce817-1046-461e-87f9-8d13c0e67838",
+            "id": "18",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Créer une ressource - Microsoft Azure",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://portal.azure.com/#view/Microsoft_Azure_Marketplace/PlusNew.ReactView/package/hub/additionalConfig~/%7B%7D/selectedMenuItemId/undefined/createLanding/undefined",
+            "visit_count": 1
+         }, {
+            "date_added": "13326989184410424",
+            "date_last_used": "13376181040402792",
+            "guid": "dca36746-77eb-4e6d-b409-3ac085df60d7",
+            "id": "19",
+            "name": "Blazor CRUD Operations",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://chat.openai.com/c/68a8cfc3-6c47-4352-bd04-8f911aaa6158",
+            "visit_count": 1
+         }, {
+            "date_added": "0",
+            "date_last_used": "0",
+            "guid": "3cb036a1-7b36-495f-82f6-1e8f86fc8c1b",
+            "id": "20",
+            "name": "Actualités",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://news.google.com/",
+            "visit_count": 0
+         }, {
+            "date_added": "0",
+            "date_last_used": "13330856036386236",
+            "guid": "ae35e61a-8aec-4432-8124-2a417e922b37",
+            "id": "21",
+            "name": "Android ROMs",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://theunlockr.com/roms/android-roms/",
+            "visit_count": 0
+         }, {
+            "date_added": "13368782595702194",
+            "date_last_used": "0",
+            "guid": "e13245f9-1294-4204-9193-10dcf6bbb472",
+            "id": "22",
+            "name": "",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "file:///C:/Users/Public/Desktop/Google%20Chrome.lnk",
+            "visit_count": 0
+         }, {
+            "date_added": "0",
+            "date_last_used": "0",
+            "guid": "729b0b69-c115-4cf6-84c9-c65c1051ea17",
+            "id": "23",
+            "name": "تحميل تعريفات USB Drivers لجميع انواع الهواتف الذكية بنظام الاندرويد",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.shgaf.com/2021/08/Usb-drivers.html",
+            "visit_count": 0
+         }, {
+            "date_added": "0",
+            "date_last_used": "0",
+            "guid": "e3da6255-3402-4ab7-91ac-16d6a584c6f5",
+            "id": "24",
+            "name": "Needrom",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.needrom.com/",
+            "visit_count": 0
+         }, {
+            "date_added": "0",
+            "date_last_used": "0",
+            "guid": "b085dba6-426c-458b-89db-48603af29bf5",
+            "id": "25",
+            "name": "Firmware File - Database of Stock ROM (Flash File)",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://firmwarefile.com/",
+            "visit_count": 0
+         }, {
+            "date_added": "0",
+            "date_last_used": "0",
+            "guid": "d5376e47-6fca-45dd-835d-ed2d5213585d",
+            "id": "26",
+            "name": "outsystems - بحث Google‏",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.google.com/search?q=outsystems&oq=out&aqs=chrome.1.69i57j35i39j46i67l2j0i67i131i433j0i67j0i131i433i512j69i60.2960j0j7&sourceid=chrome&ie=UTF-8",
+            "visit_count": 0
+         }, {
+            "date_added": "13321461148049771",
+            "date_last_used": "0",
+            "guid": "9eefa48c-a4ed-46f5-86cc-02680bd4a986",
+            "id": "27",
+            "name": "jnd sdk – Juste un autre WordPress site par jnd sdk",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://soggyjump.s4-tastewp.com/",
+            "visit_count": 0
+         }, {
+            "date_added": "0",
+            "date_last_used": "0",
+            "guid": "68407a87-91fe-4486-b1f1-082d54317cd7",
+            "id": "28",
+            "name": "Maps",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://maps.google.com/",
+            "visit_count": 0
+         }, {
+            "date_added": "0",
+            "date_last_used": "0",
+            "guid": "8ee421ea-0fcf-411c-81ca-d11a336cd5dd",
+            "id": "29",
+            "name": "منصة العمل الحر | الرئيسية",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://freelance.sa/",
+            "visit_count": 0
+         }, {
+            "date_added": "0",
+            "date_last_used": "0",
+            "guid": "cacd675b-0963-41c1-a585-5e9eeaa2d1ed",
+            "id": "30",
+            "name": "المنتدى الجزائري للمحمول - Dzgsm",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.dzgsm.com/vb/",
+            "visit_count": 0
+         }, {
+            "date_added": "0",
+            "date_last_used": "0",
+            "guid": "682e25d8-4cab-48ab-b236-6ed3eafc1413",
+            "id": "31",
+            "name": "Traduire",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://translate.google.com/",
+            "visit_count": 0
+         }, {
+            "date_added": "13324849655058964",
+            "date_last_used": "0",
+            "guid": "7a133118-54d7-4c60-aa6d-2a256c91e5a7",
+            "id": "32",
+            "name": "STEAMUNLOCKED » Free Steam Games Pre-installed for PC",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://steamunlocked.net/",
+            "visit_count": 0
+         }, {
+            "date_added": "13325049204423896",
+            "date_last_used": "0",
+            "guid": "f7fc7538-6ad3-43a6-905d-4ec5b4f31345",
+            "id": "33",
+            "name": "Circuit design Editing Components | Tinkercad",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.tinkercad.com/things/hDHNwrR8svu-editing-components/editel?lessonid=EFU6PEHIXGFUR1J&projectid=OGK4Q7VL20FZRV9&collectionid=OMOZACHJ9IR8LRE&tenant=circuits#/lesson-viewer",
+            "visit_count": 0
+         }, {
+            "date_added": "13327015030437628",
+            "date_last_used": "13327072537518993",
+            "guid": "32e5bf9f-6ab7-4b69-8737-4018b934b445",
+            "id": "34",
+            "name": "Blazor Server App CRUD With Entity Framework Core In .Net 5",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.c-sharpcorner.com/article/blazor-crud-app-using-entity-framework-core-in-net-5/",
+            "visit_count": 0
+         }, {
+            "date_added": "13327072525798255",
+            "date_last_used": "0",
+            "guid": "5a598da1-5b39-4ee5-adf5-39fe76de8f29",
+            "id": "35",
+            "name": "el nido palawan - Recherche",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.bing.com/spotlight?q=el+nido+palawan&spotlightId=PalawanElNidoPhilippines&FORM=EMSDS0",
+            "visit_count": 0
+         }, {
+            "date_added": "13363896772144189",
+            "date_last_used": "0",
+            "guid": "3e19fc20-58a9-4d5e-8af9-c9721e5cce0b",
+            "id": "36",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "YouTube MP3 Playlist Downloader Online - Loader.to",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://en.loader.to/4/",
+            "visit_count": 0
+         } ],
+         "date_added": "13376961847675359",
+         "date_last_used": "0",
+         "date_modified": "13370649793867788",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Barre des favoris",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "children": [ {
+               "date_added": "13324705054775840",
+               "date_last_used": "0",
+               "guid": "0ea0aa3f-2aac-4206-9db6-c30f5524b4b8",
+               "id": "10",
+               "name": "Laminas - Recherche",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.bing.com/search?q=Laminas&FORM=HDRSC1",
+               "visit_count": 0
+            }, {
+               "date_added": "13324849516204738",
+               "date_last_used": "0",
+               "guid": "25230b25-80b9-4af8-a7ae-332b00da2bae",
+               "id": "11",
+               "name": "Ocean of Games",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "http://oceanofgames.com/",
+               "visit_count": 0
+            } ],
+            "date_added": "13320431513069403",
+            "date_last_used": "0",
+            "date_modified": "13324849516204738",
+            "guid": "96878a6b-9ac3-439d-9318-cb440e7f88c5",
+            "id": "9",
+            "name": "Other Bookmarks",
+            "source": "unknown",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "0",
+               "date_last_used": "0",
+               "guid": "16f1d2d3-c158-487e-9b0d-eae00f2f4634",
+               "id": "13",
+               "name": "elearn: Tous les cours",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "http://elearning.univ-biskra.dz/moodle/course/index.php?categoryid=1194",
+               "visit_count": 0
+            }, {
+               "date_added": "0",
+               "date_last_used": "0",
+               "guid": "8a9e4180-e56c-4cc0-88e2-f8a06591899f",
+               "id": "14",
+               "name": "Nouvel onglet",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "chrome://newtab/",
+               "visit_count": 0
+            }, {
+               "date_added": "0",
+               "date_last_used": "0",
+               "guid": "067b0ee8-b78e-4d10-ba7c-9016d4418eec",
+               "id": "15",
+               "name": "Common Voice",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://commonvoice.mozilla.org/",
+               "visit_count": 0
+            } ],
+            "date_added": "13320431513070385",
+            "date_last_used": "0",
+            "date_modified": "13320431513070385",
+            "guid": "c151d088-8ffd-452d-b198-fac6bc8b6768",
+            "id": "12",
+            "name": "Synced Bookmarks",
+            "source": "unknown",
+            "type": "folder"
+         } ],
+         "date_added": "13376961847675365",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Autres favoris",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [ {
+            "date_added": "13267054124047862",
+            "date_last_used": "0",
+            "guid": "956d111a-a702-4832-b0be-5b94a8d9809a",
+            "id": "6",
+            "name": "elearn: Tous les cours",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "http://elearning.univ-biskra.dz/moodle/course/index.php?categoryid=1194",
+            "visit_count": 0
+         }, {
+            "date_added": "13291994516628713",
+            "date_last_used": "0",
+            "guid": "d676fb1b-70c6-4080-a9fc-12fcb773f126",
+            "id": "7",
+            "name": "Nouvel onglet",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "chrome://newtab/",
+            "visit_count": 0
+         }, {
+            "date_added": "13323039001435227",
+            "date_last_used": "0",
+            "guid": "32cdf168-fc71-441b-a968-ad2542610aab",
+            "id": "8",
+            "name": "Common Voice",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://commonvoice.mozilla.org/",
+            "visit_count": 0
+         } ],
+         "date_added": "13376961847675370",
+         "date_last_used": "0",
+         "date_modified": "13323039001435227",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Favoris de l’appareil mobile",
+         "source": "unknown",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CkEKHgiIgQISCPGYVGCTAQAAKg4QABgBIAAoBTAAOABAABIAKhhQTDBac0VDYUVjZTh3enpMNDdaR09RPT1IA6AGDBKuAQgkEqkBChw4RC9HUzNtWGlKL1NJYktjT0YyeksyTnVtNnM9EiQzZTE5ZmMyMC01OGE5LTRkNWUtOGFmOS1jOTcyMWU1Y2NlMGIYACAAKAAwz73urIUyOPyV7qyFMkD8le6shTJKHEFxRDVGZXpmZHl2R0J0c01mT0Fub0ZqZCthbz1aICIe//9wMmdaWUI0SitydEM1NnJRUG5ZcFU0QWtpenc9ZVcm3snCPgJgBRKuAQgjEqkBChx1TlhVaUwwSmd6UDgyKzEwUGdtRThXNzVIOVU9EiQ1YTU5OGRhMS01YjM5LTRlZTUtYWRmNS0zOWZlNzZkZThmMjkYACAAKAAwgZ6Ov8YxOJ672JX8MECeu9iV/DBKHG5INGhCVWdLZFFKb0hIMnZTUFpXdmtmY0xrRT1aICIe//9MMGZOQmlCZUxvcGxuWXhPcDZTemZORWFwUms9ZbFEiQjCPgJgBRKuAQgiEqkBChxpTXRteU1WSVplZ1RsSE9MZlYyckNjQ2VUUlU9EiQzMmU1YmY5Zi02YWI3LTRiNjktODczNy00MDE4YjkzNGI0NDUYACAAKAAwkaKZ3oAxOK6vo/r7MECur6P6+zBKHEJEUk9ISnJKTDVOUW9mQTlTRHEzTElna2oyRT1aICIe//9GeDllTnFCZEYxUmpQSDhGTnc5SW9xNWlOQjA9ZawsthfCPgJgBRKuAQgfEqkBChwvZFhFcXE1VmpBMFZjZFZMT04yd1JwMnhKK0E9EiQ2ODJlMjVkOC00Y2FiLTQ4YWItYjIzNi02ZWQzZWFmYzE0MTMYACAAKAAwlb7Dt68xOKygg6bxMECsoIOm8TBKHERYZDZ1N2hTdjVLZ3p5TFZQMXV0T0VPdkNidz1aICIe//cvYm0xZ0MweEFiUTQ3Z2NOeE1SSmVKYXcyc3c9ZVwq+SrCPgJgBRKuAQgeEqkBChx1bnQ1SCtqWjhGTGtDUFIxcVRTL082M0V4V009EiRjYWNkNjc1Yi0wOTYzLTQxYzEtYTU4NS01ZTllZWFhMmQxZWQYACAAKAAwgKrnr4QyOP2fg6bxMED9n4Om8TBKHG5ubjlpcGZwN2UycjVoMW1DcjZxbFRibitjRT1aICIe/+5LWm5hM29IMzRsMXBSbCtVd01NVHFQbzlleDQ9ZQAAAADCPgJgBRKuAQgcEqkBChxEbXArNWZmMkU3eUlaRnV4QWJQVThJQjc2dFE9EiQ2ODQwN2E4Ny05MWZlLTQ0ODYtYjFmMS0wODJkNTQzMTdjZDcYACAAKAAwhKrnr4QyOJ2gg6bxMECdoIOm8TBKHHdQdVFIQ0E2QmVzTnROSElJY0xndU5zTWE2WT1aICIe/7pDekNEOHptWUJ0dXZqaU81SXpQOGsraWQ4aVk9ZQAAAADCPgJgBRKtAQgaEqgBChxqYjFrdS9aL0dBNzNXY0hRazRIS3l1SC9xK1E9EiRkNTM3NmU0Ny02ZmNhLTQ1ZGQtODM1ZC1lZDJkNTIxMzU4NWQYACAAKAAwhqrnr4QyOIaQgbfjMECGkIG34zBKHFlPQ2pVZXU0T0w4TnFjYmhhY1pUalExUGhLMD1aHyId/3JtZ2NJZGZGY2tCQUJiYlpkUU1WQWtNOVppMD1lAAAAAMI+AmAFEq0BCBkSqAEKHGpZSk1RRzZ4N0I1M1BOUDgxN2xNL01rc0Mvbz0SJGIwODVkYmE2LTQyNmMtNDU4Yi04OWRiLTQ4NjAzYWYyOWJmNRgAIAAoADCCquevhDI4qo6Bt+MwQKqOgbfjMEocOFhPVjlSaHJ2S2lkNlZiU1l0RTI4bDdZc1JVPVofIh3/Mitnc095U2d2SXBPd3oySjZacGpwSUdsN0xjPWUAAAAAwj4CYAUSrQEIFhKoAQocM3RWOFUwL1JpNUxubWo3TVkvLzc5MWVhbzFZPRIkZTEzMjQ1ZjktMTI5NC00MjA0LTkxOTMtMTBkY2Y2YmJiNDcyGAAgACgAMNzuz8aXMjjx8M/GlzJA8fDPxpcyShxZbk9GaTYxcXJYKzVWcTVXWEMwVE9DMDZuU009Wh8iHfxVbm5aUEY1ZkUrRHFKOXpBc1dBUm9NMHdSdFk9ZQAAAADCPgJgBRKtAQgUEqgBChxUaFlJZmE3UVlqTjlERU9BYlNmS0R4UjhXRWs9EiQzY2IwMzZhMS03YjM2LTQ5NWYtODJmNi0xZThmODZmYzhjMWIYACAAKAAw/6nnr4QyONqOgbfjMEDajoG34zBKHDlPSUlvZU1GWWNuRGV1YlRPSjNmSDh0U3J4bz1aHyId2is0Und6MU1oOWtvMFNjWjFuNlhDSW01L2UyTT1lAAAAAMI+AmAFEq0BCBISqAEKHFJOK3NxRnVRdnJZLy9XNmc2Q1BKZFdpQUtuND0SJDZlZmNlODE3LTEwNDYtNDYxZS04N2Y5LThkMTNjMGU2NzgzOBgAIAAoADCa2OqDoTI4pfD5wJ4yQKXw+cCeMkocWXBLMWcxMEZDNERQY2puci9Qa0l6V1JTeU9ZPVofIh2iMDR3UzF4cDlTcERmcWVGdHJJV2RpaVlHNlBJPWXSoWxewj4CYAUSrgEIHRKpAQocSWEyamplK0VEaUMvVGgraDcyd3lZTFlMS1pvPRIkOGVlNDIxZWEtMGZjZi00MTFjLTgxY2EtZDExYTMzNmNkNWRkGAAgACgAMMCfg6bxMDjun4Om8TBA7p+DpvEwShxkZmt1SFpPRnhFUjIrWmt5Si92WU9wZUNXT3M9WiAiHv/deEFSZkNsVXUxOHZpYWpOWGNPRHFDRDgvU2RNPWUAAAAAwj4CYAUSrQEIGBKoAQocMUh5eWQzWTI5K0ZWQzlPcEpibllRdTlVYnFZPRIkZTNkYTYyNTUtMzQwMi00YWI3LTkxYWMtMTZkNmE1ODRjNmY1GAAgACgAMIWq56+EMjiLjoG34zBAi46Bt+MwShxLT3RFQmwxUzZZdlU2bmFwOTFMRS9LOWtHbm89Wh8iHf5rdmpBd25GU0FWUGtjZUMybkh4YVRNd25HK1k9ZQAAAADCPgJgBRKuAQggEqkBChxhdmtFa2tTTW1iRXhNSXZRd1RTL0JwV2IyeEk9EiQ3YTEzMzExOC01NGQ3LTRjNjAtYWE2ZC0yYTI1NmM5MWU1YTcYACAAKAAw1Nvf8fMwOOqh3/HzMEDqod/x8zBKHFRDUTlMODdHT2Vjek5IN0Myam9QZ0FiN1Rjcz1aICIe//tnMXBFeHlDSU9QNzZyNU9YazAzQkIzN3Z1U2c9ZSqKnmnCPgJgBRKtAQgbEqgBChxnSFRweVExNlFMQTc2YWRzZnZiaVd6ZFliZ0k9EiQ5ZWVmYTQ4Yy1hNGVkLTQ2ZjUtODZjYy0wMjY4MGJkNGE5ODYYACAAKAAw5q/+oecwOMmX/aHnMEDJl/2h5zBKHG5lTS9hWmdWa1BqUVpyZVZ2VXVYbnprbjBtYz1aHyId/3RKWVRXbXBmY2JlMFhYdzVNa1JubHpEd0s0VT1lAAAAAMI+AmAFEqwBCBESpwEKHGJlUUljUmhGajNIUkFTLzI0c2wvdER4c1RuUT0SJDVkOGM3ODE3LTU4ZGItNDE5YS1hOTA0LTBhY2E2MzRmYTRmZhgAIAAoADC024y5tDI4yI+Bt+MwQMiPgbfjMEocT1UwMHZQcWk5MGZGR2U3YklZaUhidDdsNW9BPVoeIhxqdnNpN2xFWTVIcTAxTlBJUHlrdTZib1diRnM9Zf2cjErCPgJgBRKsAQgJEqcBChxLRUlJVnNtRFY3RTBhSjRKQUtPMDNaK3kzUVk9EiQ5Njg3OGE2Yi05YWMzLTQzOWQtOTMxOC1jYjQ0MGU3Zjg4YzUYACAAKAAw1Y2Bt+MwOPOQgbfjMEDzkIG34zBKHE54d2JoU0VMemNNMTNwditLamVza2dsTFpUMD1aHiIccXNLTit3MkcxSzNrcE9BNG9BUXcxMnZwQklvPWUAAAAAwj4CYAASrAEIEBKnAQocbTR5aGl1ZytZOXJaZkc3Q1VpdWxySTRKSEZNPRIkNWE4ODZjOWUtOTcyYi00YzYwLWJhZWUtYjQ2YjQ1NjM4Y2VlGAAgACgAMOrRwqSNMjjsjYG34zBA7I2Bt+MwShxCM0VoWkpmK2laMGRCU2UxTm9kRHNWUngrQzA9Wh4iHGNHVDVkL1ErT0FoYnpuempZY3BUdmR2eTRiWT1lmz2FtsI+AmAFEq0BCA8SqAEKHGxFL2U3cGpRdWI3RVFHcFAycGRmeENzVVJlWT0SJDA2N2IwZWU4LWI3OGUtNGQxMC1iYTdjLTkwMTZkNDQxOGVlYxgAIAAoADDEn4Om8TA4zKCDpvEwQMygg6bxMEocL3poeHJCNnAzTXJvUUtFVFZnbE9oUWdwYXlNPVofIh3cMmxpRUkyUGZUc0tlaTROaWVCcXpncXcyOVhnPWUAAAAAwj4CYAUSjgEIARKJAQoceXhKLzZmdmtlY3I3a3A1RVF6QjR0V0xwZGJFPRIkZTcwODdhMGQtYzc3NC01YThhLWE3MmItZmU0YjI0YTcxMTRhGAAgACgAMKmLpbiBMTiylZOfvzBAspWTn78wShxhUkNXTGdoRjliNUlucUtJRHZ1Si9qdlFrRmM9WgBlAAAAAMI+AmAAEq0BCA4SqAEKHFpOMEZ5YnZtTGtjMDQ1U2RydTlGbkM1WCtGST0SJDhhOWU0MTgwLWU1NmMtNGNjMC04OGUyLWY4YTA2NTkxODk5ZhgAIAAoADDUjYG34zA41JCBt+MwQNSQgbfjMEocSURKSitIcUV6T3U2ZmZDU0doOUFuS3MzV3BrPVofIh25VTZ2VWZSMFhFTzBDNW5jZ1hPa0RDNllUTzNnPWUAAAAAwj4CYAUSjgEIAhKJAQocWWNTVG9udkVTUHdxQ3M0TDJjclZodjY4TDk4PRIkMjVhZGNkMjItOTI4ZS01YWI3LWJiNWItYzFjZmU1NTUyZmU3GAAgACgAMKmLpbiBMTjBlZOfvzBAwZWTn78wShxvUFZraHdCUmJWNjVLQ1dSMitJT05IV29PdTg9WgBlAAAAAMI+AmAAEq0BCBUSqAEKHHkvcjIzMkh3Ukx6N0JMTW5BYmE5LzZCQ1dKYz0SJGFlMzVlNjFhLThhZWMtNDQzMi04MTI0LTJhNDE3ZTkyMmIzNxgAIAAoADCDquevhDI4qI+Bt+MwQKiPgbfjMEocR2cxTnlVeUgvaE1PQmt2N3lZeEhFSTN0dDlNPVofIh37UEJLbGZQWlpmcjI0UzFlbmNSWjYwZW5tcHlNPWUAAAAAwj4CYAUSrQEIDBKoAQoccHNxaFJOUVVjeHNySzhHTmFxQzlxUFR1aWprPRIkYzE1MWQwODgtOGZmZC00NTJkLWIxOTgtZmFjNmJjOGI2NzY4GAAgACgAMNKNgbfjMDilkIG34zBApZCBt+MwShxiRG9CSkxJaDdIU0ZXZkllUmloanBTSjQxREE9Wh8iHbhsdC9iZzdNWXNzWURzTGZFNU1jRXZFanhLa1E9ZQAAAADCPgJgABKsAQgKEqcBChx5SDZuY25SblpMcyszS3BybDkwVjJmdUpnQm89EiQwZWEwYWEzZi0yYWFjLTQyMDYtOWRiNi1jMzBmNTUyNGI0YjgYACAAKAAwsvHMgv4xOKvJ5azzMECryeWs8zBKHEd3VlJ5bUtubjhXNzVtZjNTVHZOdmY0dkdOST1aHiIcM1NYSFc4YTRtWSs0MU1ocC85NVZSMjJBaFdvPWWxRIkIwj4CYAUSrgEIIRKpAQocZUEwOXVlbnltTjlXeVB0Tkt1cFk1aXlDZ2E4PRIkZjdmYzc1MzgtNmFkMy00M2E2LTkwNWQtNGVjNWI0ZjMxMzQ1GAAgACgAMJXi8tD0MDi14vLQ9DBAteLy0PQwShwxNkNINzJsVzhFMmhXMEN1QzZvWmRiUUc0czQ9WiAiHv/9eE9ueVRhN0VyME9mc2NmSnhiY0hPNStYdHB3PWVy2m1Cwj4CYAUSjgEIAxKJAQocbmpnRHU4OGVDcnZYcDg2cEQ3ZkhHY3FGcDg4PRIkZWQ2ZWVjMzctYThlNy01NDkzLTgyYTQtNjA2MTFmNGMzNzRkGAAgACgAMKmLpbiBMTi+lpOfvzBAvpaTn78wShx5ek5CMDFjbjU0QTdjUlUwdVQrL1BnbVR0VW89WgBlAAAAAMI+AmAAEq0BCAgSqAEKHEZhNHNwTVB0VWNSc0VJZ3lEZk96VGRvcEJ1RT0SJDMyY2RmMTY4LWZjNzEtNDQxYi1hOTY4LWFkMjU0MjYxMGFhYhgAIAAoADCh6uac+jA41uvmnPowQNbr5pz6MEocNmpqTXlNcStkYmJGVStrcWJIMWFFUzNXMjNvPVofIh3VZldpOGlVVGhiZnV5YlZLc3RRdmhqRmJPeURJPWUAAAAAwj4CYAUSrQEIBxKoAQocWVhVdUV4OXo3aENBaGFUQlpZRFFxazBoMXVvPRIkZDY3NmZiMWItNzBjNi00MDgwLWE5ZmMtMTJmY2I3NzNmMTI2GAAgACgAMKfq5pz6MDis7eac+jBArO3mnPowShx5Ykt0alpVeDhEVW93Z3BsWjNpa1Nzd3krZGM9Wh8iHasvZ0hvQU1ENXZFd3N5dlV4V0QzWklJNnREMTg9ZQAAAADCPgJgBRKsAQgGEqcBChxTamtUWXh6Y1ZBUWNTWUxUQWhUanRTUHUyZm89EiQ5NTZkMTExYS1hNzAyLTQ4MzItYjBiZS01Yjk0YThkOTgwOWEYACAAKAAwkr7Dt68xONTq5pz6MEDU6uac+jBKHDN6eWZZY09sdWhOUmdHcHhVVnNBUFpYVG5tZz1aHiIcV2NsaVBzTmh2Nks2L29GTlM3anM2OC90dmNjPWWYwQIGwj4CYAUSrAEIDRKnAQocanRXcjVPMFgvYmI1SFpvTW5ERnd4NFc4RUdBPRIkMTZmMWQyZDMtYzE1OC00ODdlLTliMGQtZWFlMDBmMmY0NjM0GAAgACgAMJLmqo+BMTjFkIG34zBAxZCBt+MwShxONlh5WEYwTzMycGRaV0VFK09tdUNneEJ3Y009Wh4iHHNsaVVzMzE3WHdtWjNzLzN3YzZjbEJjNEZPTT1lmMECBsI+AmAFEq0BCBcSqAEKHHhLSGtDdjNucEhBZEo4Z01aVWt5Y1ptZ2h2az0SJDcyOWIwYjY5LWMxMTUtNGNmNi04NGM5LWM2NWMxMDUxZWExNxgAIAAoADCIquevhDI49o+Bt+MwQPaPgbfjMEoccHFvYlp4Wm1BQkNvSFIzVW5zM3ZNYmkybFg4PVofIh39Vk9JV2daMFFVeU5OVHNmYzFOcGdNYkhFYkg0PWUAAAAAwj4CYAUSrQEIExKoAQocK3VwTExjNG91a1ZGekhIenpzU2VoYVA4ZVM0PRIkZGNhMzY3NDYtNzdlYi00ZTZkLWI0MDktM2FjMDg1ZGY2MGQ3GAAgACgAMIrLuo6zMjj40fnt+zBA+NH57fswShxWK2FjZUV1ZE5yY2ZhUXhEd3pRUUdMdFptMlk9Wh8iHb4wVm9ZMEVPbmlJdnIyWEg4K2hyQ0lrend6Z2M9ZQJ/b7vCPgJgBRKsAQgLEqcBChxiNGhsUFFhdjhPbnp3WGk5eElDaTA3enV4bW89EiQyNTIzMGIyNS04MGI5LTRhZjgtYTdhZS0zMzJiMDBkYTJiYWUYACAAKAAw1uPW8fMwOPvj1vHzMED749bx8zBKHDlPbXh3eUVlMEJzUy9qQ0I1MHdZOWVOaFhxcz1aHiIcNUZEVDhTVkpRNjJSZnlZZVJBR3p1NTJVS3hvPWVYlzOkwj4CYAUwADgA",
+   "version": 1
+}

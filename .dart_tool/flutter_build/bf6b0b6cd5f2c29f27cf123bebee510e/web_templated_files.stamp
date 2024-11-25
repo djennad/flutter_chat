@@ -1,0 +1,1 @@
+{"inputs":["C:\\chat_web_app\\web\\*\\index.html","C:\\chat_web_app\\web\\flutter_bootstrap.js","C:\\src\\flutter\\bin\\internal\\engine.version"],"outputs":["C:\\chat_web_app\\build\\web\\*\\index.html","C:\\chat_web_app\\build\\web\\flutter_bootstrap.js"],"buildKey":"[{\"compileTarget\":\"dart2js\",\"renderer\":\"html\",\"mainJsPath\":\"main.dart.js\"}]"}
