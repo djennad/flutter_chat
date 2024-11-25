@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:chat_web_app/services/notification_service.dart';
-import 'package:just_audio/just_audio.dart';
+import 'dart:html' as html;
 
 class PrivateChatScreen extends StatefulWidget {
   final String otherUserId;
@@ -22,33 +22,24 @@ class _PrivateChatScreenState extends State<PrivateChatScreen> {
   final TextEditingController _messageController = TextEditingController();
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final currentUser = FirebaseAuth.instance.currentUser;
-  AudioPlayer? _player;
+  html.AudioElement? _audioElement;
   String? _lastMessageId;
 
   @override
   void initState() {
     super.initState();
-    print('🎵 Initializing audio player...');
-    _initAudioPlayer();
+    print('🎵 Initializing audio element...');
+    _initAudioElement();
   }
 
-  Future<void> _initAudioPlayer() async {
+  void _initAudioElement() {
     try {
-      print('🎵 Creating audio player instance');
-      _player = AudioPlayer();
-      print('🎵 Setting audio source');
-      
-      // Add a small delay before setting the asset
-      await Future.delayed(Duration(milliseconds: 100));
-      
-      await _player?.setAsset('assets/notification.mp3');
-      print('✅ Audio player initialized successfully');
-      
-      // Set volume but don't play test sound immediately
-      await _player?.setVolume(0.1);
-      print('✅ Volume set successfully');
+      print('🎵 Creating audio element');
+      _audioElement = html.AudioElement('assets/notification.mp3');
+      _audioElement?.volume = 0.5;
+      print('✅ Audio element initialized successfully');
     } catch (e, stackTrace) {
-      print('❌ Error initializing audio player: $e');
+      print('❌ Error initializing audio element: $e');
       print('❌ Stack trace: $stackTrace');
     }
   }
@@ -56,15 +47,13 @@ class _PrivateChatScreenState extends State<PrivateChatScreen> {
   Future<void> _playNotificationSound() async {
     try {
       print('🔊 Attempting to play notification sound');
-      if (_player == null) {
-        await _initAudioPlayer();
+      if (_audioElement == null) {
+        _initAudioElement();
       }
       
-      // Ensure the player is stopped before playing
-      await _player?.stop();
-      await _player?.setVolume(1.0);
-      await _player?.seek(Duration.zero);
-      await _player?.play();
+      // Reset and play
+      _audioElement?.currentTime = 0;
+      await _audioElement?.play();
       print('✅ Notification sound played successfully');
     } catch (e) {
       print('❌ Error playing notification sound: $e');
@@ -73,7 +62,7 @@ class _PrivateChatScreenState extends State<PrivateChatScreen> {
 
   @override
   void dispose() {
-    _player?.dispose();
+    _audioElement?.remove();
     _messageController.dispose();
     super.dispose();
   }

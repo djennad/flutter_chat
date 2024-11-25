@@ -32,12 +32,6 @@
       "languageVersion": "2.18"
     },
     {
-      "name": "audio_session",
-      "rootUri": "file:///C:/Users/djenn/AppData/Local/Pub/Cache/hosted/pub.dev/audio_session-0.1.21",
-      "packageUri": "lib/",
-      "languageVersion": "2.17"
-    },
-    {
       "name": "boolean_selector",
       "rootUri": "file:///C:/Users/djenn/AppData/Local/Pub/Cache/hosted/pub.dev/boolean_selector-2.1.1",
       "packageUri": "lib/",
@@ -264,24 +258,6 @@
       "rootUri": "file:///C:/Users/djenn/AppData/Local/Pub/Cache/hosted/pub.dev/js-0.6.7",
       "packageUri": "lib/",
       "languageVersion": "2.19"
-    },
-    {
-      "name": "just_audio",
-      "rootUri": "file:///C:/Users/djenn/AppData/Local/Pub/Cache/hosted/pub.dev/just_audio-0.9.42",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
-    },
-    {
-      "name": "just_audio_platform_interface",
-      "rootUri": "file:///C:/Users/djenn/AppData/Local/Pub/Cache/hosted/pub.dev/just_audio_platform_interface-4.3.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.17"
-    },
-    {
-      "name": "just_audio_web",
-      "rootUri": "file:///C:/Users/djenn/AppData/Local/Pub/Cache/hosted/pub.dev/just_audio_web-0.4.13",
-      "packageUri": "lib/",
-      "languageVersion": "3.2"
     },
     {
       "name": "leak_tracker",
@@ -554,7 +530,7 @@
       "languageVersion": "3.1"
     }
   ],
-  "generated": "2024-11-25T01:15:27.090666Z",
+  "generated": "2024-11-25T02:37:36.101834Z",
   "generator": "pub",
   "generatorVersion": "3.5.4",
   "flutterRoot": "file:///C:/src/flutter",

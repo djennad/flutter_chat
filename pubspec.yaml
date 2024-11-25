@@ -15,8 +15,6 @@ dependencies:
   js: ^0.6.7
   flutter_local_notifications: ^15.1.1
   google_fonts: ^5.1.0
-  just_audio: ^0.9.34
-  just_audio_web: ^0.4.8
 
 dev_dependencies:
   flutter_test:
