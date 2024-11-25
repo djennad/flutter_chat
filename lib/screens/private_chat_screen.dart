@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:chat_web_app/services/notification_service.dart';
+import 'package:just_audio/just_audio.dart';
 
 class PrivateChatScreen extends StatefulWidget {
   final String otherUserId;
@@ -21,11 +22,61 @@ class _PrivateChatScreenState extends State<PrivateChatScreen> {
   final TextEditingController _messageController = TextEditingController();
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final currentUser = FirebaseAuth.instance.currentUser;
+  AudioPlayer? _player;
+  String? _lastMessageId;
+
+  @override
+  void initState() {
+    super.initState();
+    print('🎵 Initializing audio player...');
+    _initAudioPlayer();
+  }
+
+  Future<void> _initAudioPlayer() async {
+    try {
+      print('🎵 Creating audio player instance');
+      _player = AudioPlayer();
+      print('🎵 Setting audio source');
+      await _player?.setAsset('assets/notification.mp3');
+      print('✅ Audio player initialized successfully');
+      
+      // Test sound with low volume
+      _player?.setVolume(0.1);
+      await _player?.play();
+      print('✅ Test sound played');
+    } catch (e, stackTrace) {
+      print('❌ Error initializing audio player: $e');
+      print('❌ Stack trace: $stackTrace');
+    }
+  }
+
+  Future<void> _playNotificationSound() async {
+    try {
+      print('🔊 Attempting to play notification sound');
+      if (_player == null) {
+        print('⚠️ Audio player is null, reinitializing...');
+        await _initAudioPlayer();
+      }
+      
+      _player?.setVolume(1.0);
+      await _player?.play();
+      print('✅ Notification sound played successfully');
+    } catch (e, stackTrace) {
+      print('❌ Error playing notification sound: $e');
+      print('❌ Stack trace: $stackTrace');
+    }
+  }
+
+  @override
+  void dispose() {
+    _player?.dispose();
+    _messageController.dispose();
+    super.dispose();
+  }
 
   String getChatRoomId() {
-    // Create a unique chat room ID by combining both user IDs
     List<String> ids = [currentUser!.uid, widget.otherUserId];
-    ids.sort(); // Sort to ensure same room ID regardless of who starts the chat
+    ids.sort();
     return ids.join('_');
   }
 
@@ -36,12 +87,10 @@ class _PrivateChatScreenState extends State<PrivateChatScreen> {
     if (currentUser == null) return;
 
     try {
-      // Create a chat room ID that's the same for both users
       final users = [currentUser.uid, widget.otherUserId]..sort();
       final chatRoomId = users.join('_');
 
-      // Add message to Firestore
-      await _firestore.collection('messages').add({
+      final messageRef = await _firestore.collection('messages').add({
         'chatRoomId': chatRoomId,
         'senderId': currentUser.uid,
         'receiverId': widget.otherUserId,
@@ -50,11 +99,9 @@ class _PrivateChatScreenState extends State<PrivateChatScreen> {
         'isRead': false,
       });
 
-      // Get receiver's online status
       final receiverDoc = await _firestore.collection('users').doc(widget.otherUserId).get();
       final isReceiverOnline = receiverDoc.data()?['isOnline'] ?? false;
 
-      // Show notification if receiver is not online
       if (!isReceiverOnline) {
         NotificationService.showNotification(
           'New message from ${currentUser.email?.split('@')[0] ?? 'Unknown'}',
@@ -74,10 +121,20 @@ class _PrivateChatScreenState extends State<PrivateChatScreen> {
   @override
   Widget build(BuildContext context) {
     final chatRoomId = getChatRoomId();
+    print('Current chatRoomId: $chatRoomId');
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Chat with ${widget.otherUsername}'),
+        title: Text(widget.otherUsername),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.volume_up),
+            onPressed: () {
+              print('🔊 Test button pressed');
+              _playNotificationSound();
+            },
+          ),
+        ],
       ),
       body: Column(
         children: [
@@ -99,6 +156,19 @@ class _PrivateChatScreenState extends State<PrivateChatScreen> {
                   );
                 }
 
+                // Play sound for new messages
+                if (snapshot.data!.docs.isNotEmpty) {
+                  final latestMessageId = snapshot.data!.docs.first.id;
+                  final latestMessage = snapshot.data!.docs.first.data() as Map<String, dynamic>;
+                  
+                  if (_lastMessageId != null && 
+                      _lastMessageId != latestMessageId && 
+                      latestMessage['senderId'] != currentUser!.uid) {
+                    _playNotificationSound();
+                  }
+                  _lastMessageId = latestMessageId;
+                }
+
                 return ListView.builder(
                   reverse: true,
                   itemCount: snapshot.data!.docs.length,
@@ -112,7 +182,7 @@ class _PrivateChatScreenState extends State<PrivateChatScreen> {
                       isMe: isMe,
                       senderEmail: chatData['senderId'] == currentUser!.uid
                           ? currentUser!.email ?? 'Unknown User'
-                          : widget.otherUsername ?? 'Unknown User',
+                          : widget.otherUsername,
                       key: ValueKey(chatDoc.id),
                     );
                   },
