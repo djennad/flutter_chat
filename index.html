@@ -1,27 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/">
+  <base href="/flutter_chat/">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A Flutter web chat application.">
+  <meta name="description" content="A Flutter web chat application">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="chat_web_app">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
@@ -34,35 +22,47 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "3171784117";
+    const serviceWorkerVersion = "2684609918";
   </script>
-
-  <!-- Firebase SDK -->
-  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js"></script>
-  
-  <!-- Initialize Firebase -->
-  <script src="firebase-config.js"></script>
-
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+  <script>
+    // Set Flutter configuration before loading the app
+    window._flutter = {
+      buildConfig: {
+        renderer: "html"
+      }
+    };
+  </script>
+
+  <!-- Firebase Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js" type="module"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js" type="module"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js" type="module"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage.js" type="module"></script>
+  <script src="firebase-config.js" type="module"></script>
+
   <script>
     window.addEventListener('load', function(ev) {
-      // Download main.dart.js
+      // Initialize Flutter
       _flutter.loader.loadEntrypoint({
         serviceWorker: {
           serviceWorkerVersion: serviceWorkerVersion,
         },
-        onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
-            appRunner.runApp();
-          });
+        onEntrypointLoaded: async function(engineInitializer) {
+          let appRunner = await engineInitializer.initializeEngine();
+          await appRunner.runApp();
         }
       });
+    });
+  </script>
+
+  <script>
+    window.addEventListener('beforeunload', function(e) {
+      e.preventDefault();
+      e.returnValue = '';
     });
   </script>
 </body>

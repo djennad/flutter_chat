@@ -1,3 +1,9 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+import { getStorage } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-storage.js";
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAWdy3w-CNr1721Gi9GmJbzJzGmlUod_Wk",
@@ -9,4 +15,14 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const firestore = getFirestore(app);
+const storage = getStorage(app);
+
+window.firebase = {
+  app,
+  auth,
+  firestore,
+  storage
+};
