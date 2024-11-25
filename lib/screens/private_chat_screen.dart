@@ -118,6 +118,7 @@ class _PrivateChatScreenState extends State<PrivateChatScreen> {
 
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blue[700],
         title: Text(widget.otherUsername),
         actions: [
           IconButton(
@@ -127,24 +128,28 @@ class _PrivateChatScreenState extends State<PrivateChatScreen> {
               _playNotificationSound();
             },
           ),
+          // Large visible test button
           Container(
-            margin: const EdgeInsets.symmetric(horizontal: 8.0),
+            margin: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
             decoration: BoxDecoration(
-              color: Colors.purple,
-              borderRadius: BorderRadius.circular(8.0),
+              color: Colors.purple[400],
+              borderRadius: BorderRadius.circular(12.0),
+              border: Border.all(color: Colors.yellow, width: 2),
             ),
-            child: IconButton(
-              icon: const Icon(Icons.star, color: Colors.yellow),
-              tooltip: 'Test New Changes',
-              onPressed: () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('✨ New Purple Button Added! - Version 2'),
-                    backgroundColor: Colors.purple,
-                    duration: Duration(seconds: 2),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Icon(Icons.rocket_launch, color: Colors.yellow, size: 28),
+                const SizedBox(width: 8),
+                const Text(
+                  'TEST',
+                  style: TextStyle(
+                    color: Colors.yellow,
+                    fontWeight: FontWeight.bold,
                   ),
-                );
-              },
+                ),
+              ],
             ),
           ),
         ],
