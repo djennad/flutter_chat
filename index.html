@@ -19,8 +19,24 @@
 
   <title>Flutter Chat</title>
   <link rel="manifest" href="manifest.json">
+
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    const serviceWorkerVersion = "3736207847";
+  </script>
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
 </head>
 <body>
+  <script>
+    // Set Flutter configuration before loading the app
+    window._flutter = {
+      buildConfig: {
+        renderer: "html"
+      }
+    };
+  </script>
+
   <!-- Firebase Scripts -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js" type="module"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js" type="module"></script>
@@ -29,12 +45,25 @@
   <script src="firebase-config.js" type="module"></script>
 
   <script>
+    window.addEventListener('load', function(ev) {
+      // Initialize Flutter
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: async function(engineInitializer) {
+          let appRunner = await engineInitializer.initializeEngine();
+          await appRunner.runApp();
+        }
+      });
+    });
+  </script>
+
+  <script>
     window.addEventListener('beforeunload', function(e) {
       e.preventDefault();
       e.returnValue = '';
     });
   </script>
-
-  <script src="main.dart.js" type="application/javascript"></script>
 </body>
 </html>
