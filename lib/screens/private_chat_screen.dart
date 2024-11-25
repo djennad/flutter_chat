@@ -37,13 +37,16 @@ class _PrivateChatScreenState extends State<PrivateChatScreen> {
       print('🎵 Creating audio player instance');
       _player = AudioPlayer();
       print('🎵 Setting audio source');
+      
+      // Add a small delay before setting the asset
+      await Future.delayed(Duration(milliseconds: 100));
+      
       await _player?.setAsset('assets/notification.mp3');
       print('✅ Audio player initialized successfully');
       
-      // Test sound with low volume
-      _player?.setVolume(0.1);
-      await _player?.play();
-      print('✅ Test sound played');
+      // Set volume but don't play test sound immediately
+      await _player?.setVolume(0.1);
+      print('✅ Volume set successfully');
     } catch (e, stackTrace) {
       print('❌ Error initializing audio player: $e');
       print('❌ Stack trace: $stackTrace');
@@ -54,16 +57,17 @@ class _PrivateChatScreenState extends State<PrivateChatScreen> {
     try {
       print('🔊 Attempting to play notification sound');
       if (_player == null) {
-        print('⚠️ Audio player is null, reinitializing...');
         await _initAudioPlayer();
       }
       
-      _player?.setVolume(1.0);
+      // Ensure the player is stopped before playing
+      await _player?.stop();
+      await _player?.setVolume(1.0);
+      await _player?.seek(Duration.zero);
       await _player?.play();
       print('✅ Notification sound played successfully');
-    } catch (e, stackTrace) {
+    } catch (e) {
       print('❌ Error playing notification sound: $e');
-      print('❌ Stack trace: $stackTrace');
     }
   }
 
